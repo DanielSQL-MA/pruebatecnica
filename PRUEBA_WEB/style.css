@@ -1,0 +1,164 @@
+:root{
+    --bg-body:#1a83c0;
+    --bg-cont:#1a6a99;
+    --bg-active:transparent;
+}
+
+
+.tab-container{
+    width: 0 auto;
+    height: right;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, .8);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.opciones{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    list-style: none;
+}
+
+.opcion{
+    flex-grow: 1;
+    text-align: center;
+    line-height: 60px;
+    border: solid 1px rgba(4, 51, 78, .6);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.option-active{
+    background: var(--bg-active);
+    border-bottom: 1px solid rgba(7, 63, 95, .4);
+}
+
+.contenido{
+    width: 100%;
+    height: 85%;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    display: none;
+    padding: 20px;
+}
+
+.content-active{
+    background: var(--bg-active);
+    display: block;
+}
+
+
+.content h3{
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    margin: 10px;
+    font-size: 30px;
+}
+
+.content h4{
+    text-align: center;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    margin: 10px;
+    font-size: 27px;
+}
+
+.content p{
+    margin: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-align: center;
+}
+
+.content b{
+    font-weight: bold;
+    
+}
+
+
+header {
+    background-color:#BBBBBB;
+    padding: 0px 0;
+    background-image: url(https://a.travel-assets.com/findyours-php/viewfinder/images/res70/200000/200775-Guanajuato.jpg?impolicy=fcrop&w=1040&h=580&q=mediumHigh);
+    background-size: contain;
+    height: 2%;
+}
+
+
+form {
+    margin: 40px 0;
+}
+
+form label,
+form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+table {
+    margin: 40px 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td,
+th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+
+.banner{
+    width: 100%;
+}
+
+.principal{
+    padding: 3em 0;
+    background: transparent;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utencilios{
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+
+    
+

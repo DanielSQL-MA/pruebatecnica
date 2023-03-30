@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Practica Examen</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-side-bar-right.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <main>
+        <section class="principal">
+
+            <h3 class="titulo-principal">Practica Examen</strong>
+                </p>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        // Hacer una solicitud GET al archivo PHP y recibir los datos en formato JSON
+                        $.getJSON("ventasxarticulo.php", function (resultados) {
+                            // Generar el HTML para la tabla utilizando los datos JSON
+                            var tabla_html = "";
+                            $.each(resultados, function (i, resultado) {
+                                tabla_html += "<tr>";
+                                tabla_html += "<td>" + resultado.Titulo + "</td>";
+                                tabla_html += "<td>" + resultado.total_ventas + "</td>";
+                                tabla_html += "</tr>";
+                            });
+                            // Agregar el HTML de la tabla al elemento tbody
+                            $("#tabla-resultadovxa tbody").html(tabla_html);
+                        });
+                    });
+                </script>
+
+                <script>
+                    $(document).ready(function () {
+                        // Hacer una solicitud GET al archivo PHP y recibir los datos en formato JSON
+                        $.getJSON("ventasglobales.php", function (resultados) {
+                            // Generar el HTML para la tabla utilizando los datos JSON
+                            var tabla_html = "";
+                            $.each(resultados, function (i, resultado) {
+                                tabla_html += "<tr>";
+                                tabla_html += "<td>" + resultado.total_ventas + "</td>";
+                                tabla_html += "</tr>";
+                            });
+                            // Agregar el HTML de la tabla al elemento tbody
+                            $("#tabla-resultadovg tbody").html(tabla_html);
+                        });
+                    });
+                </script>
+
+                <script>
+                    $(document).ready(function () {
+                        // Hacer una solicitud GET al archivo PHP y recibir los datos en formato JSON
+                        $.getJSON("articulostop.php", function (resultados) {
+                            // Generar el HTML para la tabla utilizando los datos JSON
+                            var tabla_html = "";
+                            $.each(resultados, function (i, resultado) {
+                                tabla_html += "<tr>";
+                                tabla_html += "<td>" + resultado.Titulo + "</td>";
+                                tabla_html += "<td>" + resultado.total_ventas + "</td>";
+                                tabla_html += "</tr>";
+                            });
+                            // Agregar el HTML de la tabla al elemento tbody
+                            $("#tabla-articulostop tbody").html(tabla_html);
+                        });
+                    });
+                
+                </script>
+
+                <script>
+                    $(document).ready(function () {
+                        // Hacer una solicitud GET al archivo PHP y recibir los datos en formato JSON
+                        $.getJSON("articulosstock.php", function (resultados) {
+                            // Generar el HTML para la tabla utilizando los datos JSON
+                            var tabla_html = "";
+                            $.each(resultados, function (i, resultado) {
+                                tabla_html += "<tr>";
+                                tabla_html += "<td>" + resultado.total_productos + "</td>";
+                                tabla_html += "</tr>";
+                            });
+                            // Agregar el HTML de la tabla al elemento tbody
+                            $("#tabla-articulosstock tbody").html(tabla_html);
+                        });
+                    });
+                </script>
+
+                <script>
+                    $(document).ready(function () {
+                        // Hacer una solicitud GET al archivo PHP y recibir los datos en formato JSON
+                        $.getJSON("notificaciones.php", function (resultados) {
+                            // Generar el HTML para la tabla utilizando los datos JSON
+                            var tabla_html = "";
+                            $.each(resultados, function (i, resultado) {
+                                tabla_html += "<tr>";
+                                tabla_html += "<td>" + resultado.IDProductos + "</td>";
+                                tabla_html += "<td>" + resultado.Titulo + "</td>";
+                                tabla_html += "<td>" + resultado.PrecioUnitario + "</td>";
+                                tabla_html += "<td>" + resultado.Existencias + "</td>";
+
+                                tabla_html += "</tr>";
+                            });
+                            // Agregar el HTML de la tabla al elemento tbody
+                            $("#tabla-notificaciones tbody").html(tabla_html);
+                        });
+                    });
+                </script>
+
+        </section>
+        <div class="tab-container">
+            <ul class="opciones">
+                <li id="opcionventasxarticulos" class="opcion option-active">
+                    <h3>Ventas x Articulo</h3>
+                </li>
+
+                <li id="opcionventasglobales" class="opcion">
+                    <h3>Ventas Globales</h3>
+                </li>
+
+                <li id="opcionarticulotop" class="opcion">
+                    <h3>Articulos más vendidos</h3>
+                </li>
+
+                <li id="opcionstock" class="opcion">
+                    <h3>Cantidad de Productos existente</h3>
+                </li>
+
+                <li id="opcionnotificaciones" class="opcion">
+                    <h3>Notificaciones</h3>
+                </li>
+            </ul>
+
+            <div class="contenido">
+                <div id="contentventasxarticulos" class="content content-active">
+                    <h3>Ventas x Articulo</h3>
+                    <p>
+                    <table id="tabla-resultadovxa">
+                        <thead>
+                            <th>Producto</th>
+                            <th>Total de Ventas</th>
+                           
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    </b>
+                    </p>
+
+                </div>
+
+                <div id="contentventasglobales" class="content">
+                    <h3>Ventas Globales</h3>
+                    <p>
+                    <table id="tabla-resultadovg">
+                        <thead>
+                            <th>Total de Ventas</th>
+                            
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    </p>
+                </div>
+
+                <div id="contentarticulotop" class="content">
+                    <h3>Articulos más vendidos</h3>
+                    <p>
+                    <table id="tabla-articulostop">
+                        <thead>
+                            <th>Titulo</th>
+                            <th>Total de Ventas</th>
+                           
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    </p>
+                </div>
+
+                <div id="contentstock" class="content">
+                    <h3>Cantidad de Productos Existentes</h3>
+                    <p>
+                        <table id="tabla-articulosstock">
+                            <thead>
+                               
+                                <th>Total de Productos</th>
+                                
+                            </thead>
+    
+                            <tbody>
+    
+                            </tbody>
+                        </table>
+                    </p>
+                </div>
+
+                <div id="contentnotificaciones" class="content">
+                    <h3>Notificaciones</h3>
+                    <p>
+                        <table id="tabla-notificaciones">
+                            <thead>
+                               
+                                <th>IDProductos</th>
+                                <th>Titulo</th>
+                                <th>PrecioUnitario</th>
+                                <th>Existencias</th>
+                                
+                            </thead>
+    
+                            <tbody>
+    
+                            </tbody>
+                        </table>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+
+
+</html>
